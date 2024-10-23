@@ -14,16 +14,14 @@ export const ThemeProvider = ({children}) => {
         localStorage.setItem('theme', theme);
     }, [theme]);
 
-    toggleTheme = () => {
+    const toggleTheme = () => {
+        console.log('Theme has been changed')
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
     return (
-        <ThemeContext.Provider value={{ theme, togglrTheme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}
         </ThemeContext.Provider>
     );
-
-
-
-}
+};

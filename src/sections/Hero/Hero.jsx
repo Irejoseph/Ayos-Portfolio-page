@@ -1,13 +1,19 @@
 import styles from './hero.module.css'
 import avatar2 from '../../assets/avatar2.jpeg'
-import flipicon from '../../assets/sun3337.svg'
+import light from '../../assets/sun.svg'
+import dark from '../../assets/moon.svg'
 import githubicon from '../../assets/github-light.svg'
 import xIcon from '../../assets//twitter-light.svg'
 import linkIcon from '../../assets/linkedin-light.svg'
 import cv from '../../assets/josephresume.pdf'
+import { useTheme } from '../../common/ThemeContext'
 
-const Hero = () => {
-  return (
+function Hero() {
+    const { theme, toggleTheme  } = useTheme();
+    
+    const themIcon = theme === 'light' ? light : dark;
+
+    return (
     <section id="hero" className={styles.container}>
         <div className={styles.colorThemeContainer}>
             <img 
@@ -17,8 +23,9 @@ const Hero = () => {
             />
             <img 
               className={styles.colorTheme} 
-              src={flipicon} 
-              alt="Color theme icon" 
+              src={light} 
+              alt="Color theme icon"
+              onClick={toggleTheme} 
             />
         </div>
         <div className={styles.info}>
