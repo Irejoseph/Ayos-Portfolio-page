@@ -1,18 +1,23 @@
-import styles from './hero.module.css'
-import avatar2 from '../../assets/avatar2.jpeg'
+import styles from './HeroStyles.module.css'
+import avatar2 from '../../assets/profilepicture.jpg'
 import light from '../../assets/sun.svg'
 import dark from '../../assets/moon.svg'
-import githubicon from '../../assets/github-light.svg'
-import xIcon from '../../assets//twitter-light.svg'
-import linkIcon from '../../assets/linkedin-light.svg'
+import githublight from '../../assets/github-light.svg'
+import githubdark from '../../assets/github-dark.svg'
+import xdark from '../../assets/twitter-dark.svg'
+import xlight from '../../assets//twitter-light.svg'
+import linklight from '../../assets/linkedin-light.svg'
+import linkdark from '../../assets/linkedin-dark.svg'
 import cv from '../../assets/josephresume.pdf'
 import { useTheme } from '../../common/ThemeContext'
 
 function Hero() {
     const { theme, toggleTheme  } = useTheme();
+    const themeIcon = theme === 'light' ? light : dark;
+    const githubIcon = theme === 'light' ? githublight : githubdark;
+    const xIcon = theme === 'light' ? xlight : xdark;
+    const linkIcon = theme === 'light' ? linklight : linkdark;
     
-    const themIcon = theme === 'light' ? light : dark;
-
     return (
     <section id="hero" className={styles.container}>
         <div className={styles.colorThemeContainer}>
@@ -23,7 +28,7 @@ function Hero() {
             />
             <img 
               className={styles.colorTheme} 
-              src={light} 
+              src={themeIcon} 
               alt="Color theme icon"
               onClick={toggleTheme} 
             />
@@ -37,21 +42,21 @@ function Hero() {
             <h2>Frontend Developer</h2>
             <span>
                 <a href="https://github.com/Irejoseph" targets="_blank">
-                  <img src={githubicon} alt="githubicon" />
+                  <img src={githubIcon} alt="githubicon" />
                 </a>
                 <a href="https://x.com/jojocapsalot" targets="_blank">
                   <img src={xIcon} alt="X Icon" />
                 </a>
-                <a href="joseph-odenike-740a6a1b6" targets="_blank">
+                <a href="https://linkedin.com/in/joseph-odenike-740a6a1b6" targets="_blank">
                   <img src={linkIcon} alt="Linkedin Icon" />
                 </a>
             </span>
-            <p>
+            <p className={styles.profile}>
                 A data analyst with a passion for software development.
             </p>
             <a href={cv} download>
                 <button className='hover'>
-                    Resume
+                    CV
                 </button>
             </a>
         </div>

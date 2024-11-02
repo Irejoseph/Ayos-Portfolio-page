@@ -1,0 +1,87 @@
+:root {
+     --background-color: white;
+     --btn-color: rgb(16, 100, 101);
+     --btn-text-color:rgb(169, 154, 23);
+     --project-card-bg: #ffffff00;
+     --text-color: #222;
+     --form-text-color: #555;
+     --footer-text-color: #888;
+}
+
+[data-theme='dark'] {
+     --background-color: rgb(123, 44, 156);
+     --btn-color: rgb(96, 219, 68);
+     --btn-text-color:black;
+     --project-card-bg: #ffffff00;
+     --text-color: #def50f;
+     --form-text-color: #070202;
+     --footer-text-color: #33d3c6;
+
+     /*h1 {
+          text-shadow: -4px 4px #ef3550,
+               -8px 8px #f48fb1,
+               -12px 12px #7e57c2,
+               -16px 16px #2196f3,
+               -20px 20px #26c6da,
+               -24px 24px #43a047,
+               -28px 28px #eeff41,
+               -32px 32px #f9a825,
+               -36px 36px #ff5722;
+     }*/
+     
+}
+
+body {
+     background-color: var(--background-color);
+     display: flex;
+     justify-content: center;
+     margin: 0 auto 50px;
+}
+
+#root{
+     display: flex;
+     flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+p {
+     color: var(--text-color);
+     margin: 0 auto;
+}
+
+h1 {
+     font-family: 'Rubik', sans-serif;
+     font-size: 32px;
+     font-style: oblique;
+}
+
+h2, 
+h3, 
+p {
+     font-family: 'Roboto Mono', mmonospace;
+}
+
+h1, 
+h2 {
+     text-transform: uppercase;
+}
+
+h2,
+h3 {
+     font-size: 20px;
+}
+
+p {
+     font-size: 17px;
+     font-weight: 400;
+}
+
+.sectionTitle {
+     margin-bottom: 30px;
+}
+
+.hover {
+     cursor: pointer;
+}
