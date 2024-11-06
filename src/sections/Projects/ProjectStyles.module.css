@@ -1,0 +1,34 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    height: 100dvh;
+    min-height: 500px;
+
+    img {
+        max-width: 250px;
+        align-self: center;
+        background-color: var(--project-card-bg);
+        border-radius: 25px;
+    }
+
+    a {
+        width: fit-content;
+        color: #222;
+        text-decoration: none;
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover {
+        transition: scale(1.05);
+    }
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
