@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    height: 50dvh;
+
+    span{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+.skillList{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    max-width: 25ch;
+}
+
+}

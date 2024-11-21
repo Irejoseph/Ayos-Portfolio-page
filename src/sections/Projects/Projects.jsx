@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './ProjectStyles.module.css'
 import todo from '../../assets/todolist.png'
+import chowX from '../../assets/order-food.png'
+import fit from '../../assets/courses.png'
 import ProjectsCard from './ProjectsCard'
 
 
@@ -13,6 +15,19 @@ function Projects() {
           src={todo} 
           link="https://github.com/Irejoseph/Reactions/tree/main/Todo/todolist"
           h3={'Todo List'}
+          p={'An app to put your todo list together'}
+        />
+        <ProjectsCard
+          src={chowX} 
+          link="https://github.com/Irejoseph/Reactions/tree/Newproject/Foodapp/foodapp"
+          h3={'Chow Xpress'}
+          p={'An app to order food from various vendors around you'}
+        />
+        <ProjectsCard
+          src={fit} 
+          link=""
+          h3={'FItfam'}
+          p={'An app to help tailor, measure and schedule your fitness to your convenience'}
         />
       </div>        
     </section>
