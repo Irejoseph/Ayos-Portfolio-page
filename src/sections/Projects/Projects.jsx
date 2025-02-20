@@ -3,6 +3,7 @@ import styles from './ProjectStyles.module.css'
 import todo from '../../assets/todolist.png'
 import chowX from '../../assets/order-food.png'
 import fit from '../../assets/courses.png'
+import SolarE from '../../assets/Sun solar energy logo.jpeg'
 import ProjectsCard from './ProjectsCard'
 
 
@@ -28,6 +29,12 @@ function Projects() {
           link=""
           h3={'FItfam'}
           p={'An app to help tailor, measure and schedule your fitness to your convenience'}
+        />
+        <ProjectsCard 
+          src={SolarE}
+          link=""
+          h3={'Cheap Green Electricity'}
+          p={'A landing page for a solar energy company'}
         />
       </div>        
     </section>

@@ -46,7 +46,7 @@
     }
 
     button:hover {
-        transform: scale(1.10);
+        transform: scale(1.15);
     }
 
     button:active {
